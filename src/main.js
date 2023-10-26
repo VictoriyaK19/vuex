@@ -4,6 +4,7 @@ import { createStore } from "vuex";
 import App from "./App.vue";
 
 const counterModule = {
+  namespaced: true,
   state() {
     return {
       counter: 0,
@@ -27,6 +28,9 @@ const counterModule = {
       console.log(context);
       context.commit("increase", payload);
     },
+    login() {
+
+    }
   },
   getters: {
     finalCounter(state) {
@@ -56,7 +60,6 @@ const store = createStore({
     };
   },
   mutations: {
-    
     setAuth(state, payload) {
       state.isLoggedIn = payload.isAuth;
     },
