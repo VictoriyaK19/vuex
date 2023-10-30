@@ -1,4 +1,7 @@
 export default  {
+  testAuth(state) {
+    return state.isLoggedIn;
+  },
     finalCounter(state) {
       return state.counter * 3;
     },
